@@ -11,6 +11,6 @@ function exactMatch(drivers,obj){
   return drivers.filter(driver => driver[exact[0]] === obj[exact[0]]);
 }
 function exactMatchToList(drivers, obj){
-  let match = Object.keys(obj);
-  return drivers.filter(driver => driver[match[0]] === obj[match[0]]).map(driver => driver.name);
+  let exact = Object.keys(obj);
+  return drivers.filter(driver => driver[exact[0]] === obj[exact[0]]).map(driver => driver.name);
 }
